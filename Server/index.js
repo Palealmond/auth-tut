@@ -4,11 +4,12 @@ import express from 'express'
 import morgan from 'morgan'
 import postRouter from './routes/posts.js'
 import userRouter from './routes/users.js'
-
+import cors from 'cors'
 const PORT = process.env.PORT || 8080;
 
 const app = express()
 
+app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
 
