@@ -16,6 +16,8 @@ export default function Home() {
           id={el._id}
           text={el.text}
           key={el._id}
+          handle={el.author.handle}
+          username={el.author.username}
         />
       ))}
     </div>
