@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import './db/connections.js'
 import express from 'express'
 import morgan from 'morgan'
 import postRouter from './routes/posts.js'
@@ -14,6 +15,6 @@ app.use('/', postRouter)
 
 
 app.listen(PORT, () => {
-  console.log(`This bitch is running on http://localhost:${PORT}`);
+  console.log(`This bih is running on http://localhost:${PORT} type beat`);
 })
 
