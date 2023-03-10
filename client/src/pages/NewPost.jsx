@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { createPost } from '../api/posts'
 
 export default function NewPost() {

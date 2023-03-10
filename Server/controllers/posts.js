@@ -12,3 +12,15 @@ export async function GetPostById(req, res) {
   const post = await Post.findById(id).populate('author')
   return res.json(post)
 }
+
+export async function CreatePost(req, res) {
+  const { username, twuut } = req.body
+  const user = await User.findOne({ handle: username })
+  const newPost = await Post.create({
+    author: user._id,
+    date: new Date(),
+    text: twuut,
+
+  })
+  return res.json(newPost)
+}

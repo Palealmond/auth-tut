@@ -7,9 +7,9 @@ export async function getPosts() {
   return response.data
 }
 
-export async function createPost(twut, username) {
+export async function createPost(twuut, username) {
   const res = await api.post('/post/', {
-    username, twut
+    username, twuut
   })
   return res.data
 }
