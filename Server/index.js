@@ -4,6 +4,7 @@ import express from 'express'
 import morgan from 'morgan'
 import postRouter from './routes/posts.js'
 import userRouter from './routes/users.js'
+import authRouter from './routes/auth.js'
 import cors from 'cors'
 const PORT = process.env.PORT || 8080;
 
@@ -15,6 +16,8 @@ app.use(morgan('dev'))
 
 app.use('/api/post/', postRouter)
 app.use('/api/user/', userRouter)
+app.use('/api/auth/', authRouter)
+
 // app.use('/api/user/', userRouter)
 
 
