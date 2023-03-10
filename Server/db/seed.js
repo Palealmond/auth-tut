@@ -38,6 +38,16 @@ await Post.create({
   author: stephen._id,
   date: '2023-03-09T16:16:08.888Z',
 })
+const samuel = await User.create({
+  username: "Samuel Nichols",
+  handle: 'CommandantDaddy',
+})
+
+await Post.create({
+  text: 'Yo I got this cool ass sword',
+  author: samuel._id,
+  date: '2023-03-09T16:16:08.888Z',
+})
 
 
 
